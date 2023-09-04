@@ -1,0 +1,57 @@
+* {
+  border: red 1px solid;
+  margin: 0;
+  padding: 0;
+}
+
+/* banner section */
+
+#bannerImage {
+  width: 100%;
+  z-index: 1;
+}
+.banner {
+  position: relative;
+  width: 100%;
+}
+#bannerTitle {
+  color: white;
+  z-index: 2;
+  position: absolute;
+  top: 50%;
+  left: 5%;
+}
+h1 {
+  font-size: 3em;
+}
+
+/* nav bar */
+#navBar {
+  display: flex;
+  align-items: baseline;
+  z-index: 2;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 1em;
+}
+#name {
+  margin-right: auto;
+  margin-left: 1em;
+  flex: auto;
+  flex-shrink: 0;
+  color: white;
+}
+#navItems {
+  display: flex;
+  flex: none;
+  list-style-type: none;
+  justify-content: flex-end;
+  margin-right: 3em;
+}
+li {
+  margin-right: 1em;
+  flex-shrink: 0;
+  font-size: 0.8em;
+  color: white;
+}
