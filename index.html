@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <title>Jo Wand</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="/css/style.css" />
     <link
     rel="stylesheet"
     href="/css/twentytwenty.css"
@@ -12,6 +12,7 @@
   />
   </head>
   <body>
+   
 
     <!--BANNER-->
     <section class="banner">
@@ -21,25 +22,30 @@
 
       <!--NAV BAR-->
      
-      <section id="navBar">
-        <h3 id="name">Jo Wand</h3>
-        <ul id="navItems">
-          <li class="navButton">COMPOSITING</li>
-          <li class="navButton">RETOUCHING PEOPLE</li>
-          <li class="navButton">RETOUCHING PLACES</li>
-        </ul>
-      </section>
+        <section id="navBar">
+          <h3 id="name" class="myName">Jo Wand</h3>
+          <ul id="navItems">
+            <li class="navButton" class="navText">COMPOSITING</li>
+            <li class="navButton" class="navText">RETOUCHING PEOPLE</li>
+            <li class="navButton" class="navText">RETOUCHING PLACES</li>
+          </ul>
+        </section>
     </section>
     <div class="spacer20">
     </div>
 
+   
+
     <!--MAIN SECTION-->
+
 
     <div id="mainLayout">
       <section id="titleSection">
         <h3 id="pageTitle">Film Compositing- for moving image</h3>
         <h4>Jo Wand: IMDB link here</h4>
       </section>
+
+    
 
       <div class="line">
       </div>
@@ -164,7 +170,6 @@
             <img 
               src="/images/compositing/bird_after.png"
               alt="Image of a dancing bird skeleton with the puppet wires removed." />
-             
             </div>
             <div class="spacer20">
             </div>
@@ -192,6 +197,8 @@
               src="/images/compositing/winters_after.jpg"
               alt="Image of scene with the camera rig removed."/>
             </div>
+
+
             <div class="spacer20">
             </div>
             <div class="line">
@@ -351,6 +358,10 @@
     <div class="spacer20">
     </div>
 
+  
+   
+   
+
 
     <script src="/js/jquery-3.7.1.min.js" type="text/javascript"></script>
     <script src="/js/jquery.event.move.js" type="text/javascript"></script>
@@ -360,6 +371,76 @@
         $(".twentytwenty-container").twentytwenty();
       });
     </script>
+
+    <script scr="/js/script.js"></script>
+    <script>
+
+       
+
+       
+/*
+window.onscroll = () => {
+          if (window.scrollY > 286) {
+            navBar.classList.add("nav-active");
+          } else {
+            navBar.classList.remove("nav-active");
+          }
+        };
+        */
+        
+        const navBar = document.getElementById("navBar");
+        const name = document.getElementById("name");
+        const navText = document.getElementById("navItems").getElementsByTagName("li");
+        
+        
+        
+        window.onscroll = () => {
+
+          if (window.scrollY > 286) {
+            for(var i=0; i<navText.length; i++) {
+        navText[i].classList.add("nav-active")
+        navBar.classList.add("nav-active");
+        name.classList.add("nav-active");
+        }
+          } else {
+              for(var i=0; i<navText.length; i++) {
+        navText[i].classList.remove("nav-active")
+        navBar.classList.remove("nav-active");
+        name.classList.remove("nav-active");
+        }
+          }
+        };
+       
+      
+
+      
+
+       
+
+
+
+        
+
+ //const navText = document.getElementByClassName("navText");
+ //navText.classList.add("nav-text-active");
+ //navText.classList.remove("nav-text-active");
+
+
+/*
+        const navText = document.getElementsByClassName("navText");
+        window.onscroll = () => {
+          if (window.scrollY > 286) {
+            navText.classList.add("nav-active");
+          } else {
+            navText.classList.remove("nav-active");
+          }
+        };*/
+
+
+       
+
+    </script>
+  
   
   </body>
 </html>
